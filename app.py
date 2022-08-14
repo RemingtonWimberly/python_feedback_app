@@ -11,7 +11,7 @@ if ENV == 'dev':
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:123456789@localhost/whitlockis'
 else:
     app.debug = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://exsandmsnlsvbi:06b4212e1133cd4cd77b0b91bd8c98d4d27ab7a674bbb2b56f3060de4ecb7a48@ec2-54-225-234-165.compute-1.amazonaws.com:5432/d8682qsgd1gl2u'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://exsandmsnlsvbi:06b4212e1133cd4cd77b0b91bd8c98d4d27ab7a674bbb2b56f3060de4ecb7a48@ec2-54-225-234-165.compute-1.amazonaws.com:5432/d8682qsgd1gl2u'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
