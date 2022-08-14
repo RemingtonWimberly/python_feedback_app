@@ -2,17 +2,18 @@ import smtplib
 from email.mime.text import MIMEText
 
 
-def send_mail(customer, dealer, rating, comments):
+def send_mail(customer, customer_email, consultant, rating, comments):
     port = 2525
     smtp_server = 'smtp.mailtrap.io'
-    login = ''
-    password = ''
-    message = f"<h3>New Feedback Submission</h3><ul><li>Customer: {customer}</li><li>Dealer: {dealer}</li><li>Rating: {rating}</li><li>Comments: {comments}</li></ul>"
+    login = '455d90cbcf3d60'
+    password = 'ba8378a606ecfb'
+    message = f"<h3>New Feedback Submission</h3><ul><li>Customer: {customer}</li><li>Consultant: {consultant}</li><li>Rating: {rating}</li><li>Comments: {comments}</li></ul>"
 
-    sender_email = 'email1@example.com'
-    receiver_email = 'email2@example.com'
+    # sender_email = 'email1@example.com'
+    sender_email = customer_email
+    receiver_email = 'email2@whitlockis.com'
     msg = MIMEText(message, 'html')
-    msg['Subject'] = 'Lexus Feedback'
+    msg['Subject'] = f'Feedback - {consultant}'
     msg['From'] = sender_email
     msg['To'] = receiver_email
 
